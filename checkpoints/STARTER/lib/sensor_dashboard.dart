@@ -30,6 +30,7 @@ class OpenMeteoService {
   const OpenMeteoService();
 
     Future<Map<String, dynamic>> fetchCurrentJson() async {
+      // final uri = Uri.parse('https://api.open-meteo.com/v1/forecast?latitude=36.35&longitude=127.38&current=temperature_2m,relative_humidity_2m,wind_speed_10m&timezone=Asia/Seoul');
       final uri = Uri.https('api.open-meteo.com', '/v1/forecast', {
         'latitude': '36.35',
         'longitude': '127.38',
